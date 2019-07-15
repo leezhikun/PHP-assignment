@@ -19,6 +19,18 @@ a:hover {
 	color: #072FCF;
 	text-decoration: none;
 }
+.left-bordered {
+	width: auto;
+    height: auto;
+    margin: 50px 480px 20px 20px;
+    border: 1px solid white;
+}
+.right-bordered {
+	width: auto;
+    height: auto;
+	margin: -147px 20px 20px 480px;
+    border: 1px solid white;
+}
 .main {
 	width: 918px;
 	margin: 0px auto;

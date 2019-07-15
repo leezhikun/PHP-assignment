@@ -1,3 +1,10 @@
+<?php
+session_start();
+		date_default_timezone_set("Asia/Kuala_Lumpur");
+		print'<font color=”#ADD8E6>Login Successfully! Welcome: '.$_SESSION['username'].'</font>';
+		print '<br>you have been log in since:'.date('h:i:sa',$_SESSION['loggedin']);
+		print'<br><a href="logout.php">Click here to log out</a><br>';
+		?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +25,7 @@
 <div class="content">
 <form action="compare.php" method="post">
 <?php
+
 
 	if (!isset($_POST['submitted'])){ 
 		echo"
@@ -168,9 +176,11 @@
     <td>',$row['userreview'],'</td>
     <td>',$row2['userreview'],'</td>
   </tr>
-  <tr>
-	<td><strong> Rate for this compare</strong</td>
-	<td><form>
+
+</table>';
+
+echo '  
+	<p>Rate for this compare</p>
     <label class="radio-inline">
       <input type="radio" name="optradio" checked>BEST!
     </label>
@@ -179,17 +189,15 @@
     </label>
     <label class="radio-inline">
       <input type="radio" name="optradio">NAH
-	  <input type="submit" name="rate" value="rate now!">
     </label>
-  </form>
-  
-</table>';
+	<button type="button" onclick="alert(\'Submitted!\')">Rate now</button>';
 				}
 				}
 }
 }
 
 ?>
+</form>
 </div>
 <!--content end-->
 
@@ -200,4 +208,5 @@
 </div>
 </div>
 </body>
+
 </html>

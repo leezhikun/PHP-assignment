@@ -1,3 +1,10 @@
+<?php
+session_start();
+		date_default_timezone_set("Asia/Kuala_Lumpur");
+		print'<font color=”#ADD8E6>Login Successfully! Welcome: '.$_SESSION['username'].'</font>';
+		print '<br>you have been log in since:'.date('h:i:sa',$_SESSION['loggedin']);
+		print'<br><a href="logout.php">Click here to log out</a><br>';
+		?>
 <!DOCTYPE html>
 <html>
 <head>
